@@ -1,0 +1,28 @@
+{
+  "name": "script-gist-conceal",
+  "version": "0.0.1",
+  "description": "Make a gist secret by creating a new secret gist, and deleting the old one.",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/javascriptf/script-gist-conceal.git"
+  },
+  "keywords": [
+    "script",
+    "gist",
+    "conceal"
+  ],
+  "author": "wolfram77@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/javascriptf/script-gist-conceal/issues"
+  },
+  "homepage": "https://github.com/javascriptf/script-gist-conceal#readme",
+  "dependencies": {
+    "@octokit/rest": "^20.0.2"
+  }
+}
