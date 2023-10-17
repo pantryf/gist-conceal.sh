@@ -1,6 +1,6 @@
 {
   "name": "script-gist-conceal",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Make a gist secret by creating a new secret gist, and deleting the old one.",
   "private": true,
   "main": "index.js",
@@ -23,6 +23,8 @@
   },
   "homepage": "https://github.com/javascriptf/script-gist-conceal#readme",
   "dependencies": {
-    "@octokit/rest": "^20.0.2"
+    "@octokit/rest": "^20.0.2",
+    "extra-fs": "^3.2.17",
+    "extra-sleep": "^1.0.20"
   }
 }
