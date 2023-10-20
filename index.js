@@ -6,7 +6,11 @@ const {sleep}   = require('extra-sleep')
 const fs        = require('extra-fs');
 
 
+
+
 //#region CONSTANTS
+//=================
+
 /** Default options for fetching/concealing gists. */
 const OPTIONS = {
   gistDescriptionMatch: /.*/,
@@ -14,20 +18,25 @@ const OPTIONS = {
   githubThrottle:       4000,
 };
 
-const HELP = `
-Usage: script-gist-conceal [options] <command>
+const HELP = '' +
+`Usage:
+$ script-gist-conceal [options] <command>
 
 Options:
-  -i, --input <file>               input file
-  -o, --output <file>              output file
-  --github-token <token>           github token
-  --github-throttle <milliseconds> github throttle
-  --gist-description-match <regex> gist description match
-  --gist-filename-match <regex>    gist filename match
+  -i, --input <file>               Input file (for conceal).
+  -o, --output <file>              Output file (for fetch/conceal).
+  --github-token <token>           GitHub token.
+  --github-throttle <milliseconds> Throttle time in milliseconds.
+  --gist-description-match <regex> Regex to match gist description.
+  --gist-filename-match <regex>    Regex to match gist filename.
 
 Commands:
-  fetch                            fetch matching gists
-  conceal                          conceal gists by creating new secret gists
+  fetch                            Fetch gists matching criteria.
+  conceal                          Conceal gists by creating new secret gists.
+
+Environment Variables:
+  $GITHUB_TOKEN                    GitHub token.
+  $GITHUB_THROTTLE                 Throttle time in milliseconds.
 `;
 //#endregion
 
@@ -35,7 +44,11 @@ Commands:
 
 
 //#region METHODS
+//===============
+
 //#region REGEXP OPERATIONS
+//-------------------------
+
 /**
  * Parse text into a regular expression.
  * @param {string} text text to parse
@@ -51,6 +64,8 @@ function parseRegexp(text) {
 
 
 //#region GIST OPERATIONS
+//-----------------------
+
 /**
  * Get details of a gist, as a string.
  * @param {object} gist gist to get details of
@@ -160,6 +175,8 @@ async function concealGists(octokit, gists, options) {
 
 
 //#region MAIN
+//------------
+
 /**
  * Parse command line arguments into options.
  * @param {object} options options to parse into

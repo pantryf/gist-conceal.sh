@@ -9,7 +9,7 @@ Make a gist secret by creating a new secret gist, and deleting the old one.
 $ node index.js fetch --github-token <token> --output gists.log
 # Fetch all public gists and save to gists.log
 
-$ export GITHB_TOKEN=<token>
+$ export GITHUB_TOKEN=<token>
 $ node index.js fetch -o gists.log --gist-filename-match /^output-/i
 # Fetch all public gists, whose filename starts with "output-"
 
@@ -24,6 +24,32 @@ $ node index.js conceal --input gists.log
 
 $ node index.js conceal --input gists.log -o status.log
 # Conceal all gists in gists.log, and save status to status.log
+```
+
+<br>
+<br>
+
+
+## Usage
+
+```bash
+$ script-gist-conceal [options] <command>
+
+# Options:
+#   -i, --input <file>               Input file (for conceal).
+#   -o, --output <file>              Output file (for fetch/conceal).
+#   --github-token <token>           GitHub token.
+#   --github-throttle <milliseconds> Throttle time in milliseconds.
+#   --gist-description-match <regex> Regex to match gist description.
+#   --gist-filename-match <regex>    Regex to match gist filename.
+
+# Commands:
+#   fetch                            Fetch gists matching criteria.
+#   conceal                          Conceal gists by creating new secret gists.
+
+# Environment Variables:
+#   $GITHUB_TOKEN                    GitHub token.
+#   $GITHUB_THROTTLE                 Throttle time in milliseconds.
 ```
 
 <br>

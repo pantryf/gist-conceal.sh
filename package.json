@@ -1,6 +1,6 @@
 {
   "name": "script-gist-conceal",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Make a gist secret by creating a new secret gist, and deleting the old one.",
   "private": true,
   "main": "index.js",
