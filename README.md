@@ -69,3 +69,4 @@ $ script-gist-conceal [options] <command>
 [![](https://img.youtube.com/vi/yqO7wVBTuLw/maxresdefault.jpg)](https://www.youtube.com/watch?v=yqO7wVBTuLw)<br>
 [![ORG](https://img.shields.io/badge/org-javascriptf-green?logo=Org)](https://javascriptf.github.io)
 [![DOI](https://zenodo.org/badge/706319930.svg)](https://zenodo.org/doi/10.5281/zenodo.10142762)
+![](https://ga-beacon.deno.dev/G-4NEP5LC20N:1fbE9YTHTw2pzxI6HO33Mw/github.com/pantryf/gist-conceal.sh)
